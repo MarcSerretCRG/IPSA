@@ -1,8 +1,8 @@
 <?php
 	$host = 'localhost';
-	$db   = 'your_database_name';
-	$username = 'your_database_userAccount_name';
-	$password = 'your_database_userAccount_Password';
+	$db   = 'ipsa';
+	$username = 'proteo';
+	$password = 'my5q1_pr';
 	$charset = 'utf8';
 	
 	$dsn = "mysql:host=$host;dbname=$db;charset=$charset";
@@ -12,7 +12,7 @@
 			PDO::ATTR_EMULATE_PREPARES   => false
 	];
 	$pdo = new PDO($dsn, $username, $password, $opt);
-	$supportFolder = "/%absolute_path_to_website_base_folder%/support/";
+	$supportFolder = "/data/web_admin/ipsa/support/";
 	$basePath = $supportFolder . "Upload Folder/";
 	$downloadPath = $supportFolder . "Download Folder/";
 	$relativeZipPath = "support/Download Folder/";

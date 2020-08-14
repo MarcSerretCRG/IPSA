@@ -171,7 +171,7 @@ angular.module("IPSA.bulk.controller").controller("GraphCtrl", ["$scope", "$log"
   $scope.processData = function() {
     var url = "";
     if ($scope.peptide.precursorCharge > 0) {
-      url = "support/php/processData.php";
+      url = "support/php/ProcessData.php";
     } else {
       url = "support/php/NegativeModeProcessData.php";
     }

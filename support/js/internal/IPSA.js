@@ -1259,9 +1259,9 @@ angular.module("IPSA.directive", []).directive("annotatedSpectrum", function($lo
               });
 
               // using the new scale, update the annotation label positions
-              labelDataset.attr("x", function(d) { 
-                return x(d.x);
-              });
+              //labelDataset.attr("x", function(d) { 
+               // return x(d.x);
+              //});
               
               // using the new scale, update the mass error circles
               circleDataset.attr("cx", function(d) {
@@ -1368,6 +1368,24 @@ angular.module("IPSA.directive", []).directive("annotatedSpectrum", function($lo
           labelDataset.exit().attr("y", function(d) {
             return y(d3.min(yValues));
           }).remove();
+
+
+
+          var xCaca = ("x", function(d) {
+            return x(d.x) - d.width / 2;
+          })
+
+          var yCaca = ("y", function(d) {
+            return y(d3.min(yValues));
+          })
+
+console.log(y);
+console.log(x);
+
+          //labelDataset.attr("transform", "rotate(180, "+xCaca+", "+yCaca+")");
+
+
+
 
           // return dragged label back to it's original location
           labelDataset.on("dblclick", function(d, i) {

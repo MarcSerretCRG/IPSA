@@ -169,7 +169,7 @@ angular.module("IPSA.spectrum.controller").controller("GraphCtrl", ["$scope", "$
   $scope.processData = function() {
     var url = "";
     if ($scope.peptide.precursorCharge > 0) {
-      url = "support/php/processData.php";
+      url = "support/php/ProcessData.php";
     } else {
       url = "support/php/NegativeModeProcessData.php";
     }
@@ -250,13 +250,14 @@ angular.module("IPSA.spectrum.controller").controller("GraphCtrl", ["$scope", "$
 
     // Add colors to array if selected and valid
     angular.forEach($scope.checkModel, function (value, key) {
-      if (key !== "H2O" && key !== "NH3" && key !== "HPO3" && key !== "CO2") {  
+      if (key !== "H2O" && key !== "NH3" && key !== "HPO3" && key !== "CO2" && key !== "HCNO") {  
         if (!$scope.checkHex(value.color)) {
           alert("Invalid color HEX code for selected fragment: " + key);
           return true;
         } else {
           if (value.selected) {
             $scope.colorArray.push(value.color);
+		// console.log(value, key);
           } else {
             $scope.colorArray.push("");
           }

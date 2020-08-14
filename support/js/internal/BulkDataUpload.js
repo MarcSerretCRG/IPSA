@@ -196,7 +196,7 @@ myApp.controller('MyCtrl', ['$scope', 'Upload', '$timeout', '$log', '$http', '$l
   };
 
   $scope.processIdentifications = function() {
-  	var url = "support/php/processIdentifications.php";
+  	var url = "support/php/ProcessIdentifications.php";
     $scope.files.modifications.file.progress = -1;
     $scope.files.peakList.file.progress = -1;
   	// send time stamp and file name as post data
@@ -301,7 +301,7 @@ myApp.controller('MyCtrl', ['$scope', 'Upload', '$timeout', '$log', '$http', '$l
   		fileName: $scope.files.peakList.file.name,
   		validScans: []
   	};
-
+	console.log($scope.identifications);
   	$scope.identifications.forEach(function(ID) {
   		data.validScans.push(ID.scanNumber);
   	});

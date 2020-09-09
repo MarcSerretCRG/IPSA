@@ -44,8 +44,6 @@
         <li><a href="BulkDataUpload.html">Bulk Data Upload</a></li>
         <li class="divider-vertical"></li>
         <li><a href="VisualizeUploadedData.html">Visualize Uploaded Data</a></li>
-        <li class="divider-vertical"></li>
-        <li><a href="support/css/external/woff2/Fonts.zip">Download Used Fonts</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <ul><a href="http://coonlabs.com"><img src="support/images/CoonLogo.png"></a></ul>
@@ -153,6 +151,8 @@
                                   <label class="btn btn-fragment" ng-model="checkModel.H2O.selected" uib-btn-checkbox>-H<sub>2</sub>O</label>
                                   <label class="btn btn-fragment" ng-model="checkModel.NH3.selected" uib-btn-checkbox>-NH<sub>3</sub></label>
                                   <label class="btn btn-fragment" ng-model="checkModel.CO2.selected" uib-btn-checkbox>-CO<sub>2</sub></label>
+                                  <label class="btn btn-fragment" ng-model="checkModel.HCNO.selected" uib-btn-checkbox>HCNO</label>
+                                  <label class="btn btn-fragment" ng-model=="checkModel.HPO3.selected" uib-btn-checkbox>HPO3</label>
                                 </div>
                               </div>
                             </div>
@@ -224,7 +224,7 @@
                               <input minicolors="wheelsettings" id="wheel-demo" class="form-control" type="text" ng-model="checkModel.z.color"> 
                             </div>
                             <!--
-                            <div class="col-md-3" ng-hide="!checkModel.Z.selected">
+                            etdiv class="col-md-3" ng-hide="!checkModel.Z.selected">
                               <label for="wheel-demo">{{checkModel.Z.label}}</label>
                               <input minicolors="wheelsettings" id="wheel-demo" class="form-control" type="text" ng-model="checkModel.Z.color"> 
                             </div>
@@ -242,7 +242,7 @@
                         <br/>
                         <div class="row">
                           <div class="col-md-12">
-                            <button type="submit" class="btn btn-success" ng-click="ProcessData()">Generate Chart</button>
+                            <button type="submit" class="btn btn-success" ng-click="processData()">Generate Chart</button>
                             <button class="btn btn-primary" ng-click="downloadData()">Export Data</button>
                             <button svg-download title="{{peptide.sequence}}" class="btn btn-primary">Download as SVG</button>
                           </div>

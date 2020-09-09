@@ -176,6 +176,7 @@ body {
    font-family: Open Sans, sans-serif;
    text-anchor: middle;
    font-size: 16px;
+   /*transform:rotate(90deg)*/
 }
 
 .aminoacid {
@@ -265,7 +266,7 @@ body {
   content: "\25BC";
   position: absolute;
   text-align: center;
-  pointer-events:none !imporatant;
+  pointer-events:none !important;
 }
 
 /* Style northward tooltips differently */
@@ -273,7 +274,7 @@ body {
   margin: -1px 0 0 0;
   top: 100%;
   left: 0;
-  pointer-events:none !imporatant;
+  pointer-events:none !important;
 }
 
 .ui-select-bootstrap .ui-select-choices-row>span {

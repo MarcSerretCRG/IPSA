@@ -19,6 +19,7 @@ class ID {
 	// decode data from post
 	$data = json_decode(file_get_contents("php://input"));
 	$truePath = $basePath . $data->fileName;
+	//echo file_get_contents( $truePath );
 	$timeStamp = $data->timeStamp;
 	
 	try {
@@ -53,8 +54,11 @@ class ID {
 		// remove any upstream data from database 
 		
 		// load IDs into database
-		$success = $pdo->exec("LOAD DATA INFILE '" . $truePath . "' INTO TABLE identifications FIELDS TERMINATED BY ','" .
-				" OPTIONALLY ENCLOSED BY '\"' LINES TERMINATED BY '\r\n' IGNORE 1 LINES (scan_number, sequence, charge, mods) SET timestamp = " . $timeStamp);
+	//	echo ($truePath);
+		//echo ($timeStamp);
+		//echo ()
+		$success = $pdo->exec("LOAD DATA LOCAL INFILE '" . $truePath . "' INTO TABLE identifications FIELDS TERMINATED BY ','" .
+				" OPTIONALLY ENCLOSED BY '\"' LINES TERMINATED BY '\n' IGNORE 1 LINES (scan_number, sequence, charge, mods) SET timestamp = " . $timeStamp);
 		
 		if(!$success)
 		{

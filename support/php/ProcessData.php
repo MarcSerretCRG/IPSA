@@ -167,6 +167,15 @@ class Peptide {
 						array_push($this->fragments, $fragment);
 					}
 				}
+				
+				if ($this->fragTypes->HCNO->selected && preg_match("/[R]/", $this->GetSubPeptideSequence($subPeptide))) {
+                    $tempMass = $deltaMass;
+                    $tempMass -= ChemistryConstants::$H + ChemistryConstants::$C + ChemistryConstants::$N + ChemistryConstants::$O;
+                    $fragmentMZs = $this->CreateFragment($subPeptide, "a", $tempMass, "-HCNO");
+                    foreach ($fragmentMZs as $fragment) {
+                        array_push($this->fragments, $fragment);
+                    }
+                }
 
 				if ($this->fragTypes->HPO3->selected) {
 					preg_match("/[STY]/", $this->GetSubPeptideSequence($subPeptide), $outArray, PREG_OFFSET_CAPTURE);
@@ -226,6 +235,15 @@ class Peptide {
 					}
 				}
 
+                if ($this->fragTypes->HCNO->selected && preg_match("/[R]/", $this->GetSubPeptideSequence($subPeptide))) {
+                    $tempMass = $deltaMass;
+                    $tempMass -= ChemistryConstants::$H + ChemistryConstants::$C + ChemistryConstants::$N + ChemistryConstants::$O;
+                    $fragmentMZs = $this->CreateFragment($subPeptide, "b", $tempMass, "-HCNO");
+                    foreach ($fragmentMZs as $fragment) {
+                        array_push($this->fragments, $fragment);
+                    }
+                }
+				
 				if ($this->fragTypes->HPO3->selected) {
 					preg_match("/[STY]/", $this->GetSubPeptideSequence($subPeptide), $outArray, PREG_OFFSET_CAPTURE);
 	
@@ -283,6 +301,15 @@ class Peptide {
 						array_push($this->fragments, $fragment);
 					}
 				}
+				
+                if ($this->fragTypes->HCNO->selected && preg_match("/[R]/", $this->GetSubPeptideSequence($subPeptide))) {
+                    $tempMass = $deltaMass;
+                    $tempMass -= ChemistryConstants::$H + ChemistryConstants::$C + ChemistryConstants::$N + ChemistryConstants::$O;
+                    $fragmentMZs = $this->CreateFragment($subPeptide, "c", $tempMass, "-HCNO");
+                    foreach ($fragmentMZs as $fragment) {
+                        array_push($this->fragments, $fragment);
+                    }
+                }
 
 				if ($this->fragTypes->HPO3->selected) {
 					preg_match("/[STY]/", $this->GetSubPeptideSequence($subPeptide), $outArray, PREG_OFFSET_CAPTURE);
@@ -342,6 +369,17 @@ class Peptide {
 					}
 				}
 
+				
+                if ($this->fragTypes->HCNO->selected && preg_match("/[R]/", $this->GetSubPeptideSequence($subPeptide))) {
+                    $tempMass = $deltaMass;
+                    $tempMass -= ChemistryConstants::$H + ChemistryConstants::$C + ChemistryConstants::$N + ChemistryConstants::$O;
+                    $fragmentMZs = $this->CreateFragment($subPeptide, "C", $tempMass, "-HCNO");
+                    foreach ($fragmentMZs as $fragment) {
+                        array_push($this->fragments, $fragment);
+                    }
+                }
+				
+				
 				if ($this->fragTypes->HPO3->selected) {
 					preg_match("/[STY]/", $this->GetSubPeptideSequence($subPeptide), $outArray, PREG_OFFSET_CAPTURE);
 					
@@ -401,6 +439,15 @@ class Peptide {
 					}
 				}
 
+				 if ($this->fragTypes->HCNO->selected && preg_match("/[R]/", $this->GetSubPeptideSequence($subPeptide))) {
+                    $tempMass = $deltaMass;
+                    $tempMass -= ChemistryConstants::$H + ChemistryConstants::$C + ChemistryConstants::$N + ChemistryConstants::$O;
+                    $fragmentMZs = $this->CreateFragment($subPeptide, "x", $tempMass, "-HCNO");
+                    foreach ($fragmentMZs as $fragment) {
+                        array_push($this->fragments, $fragment);
+                    }
+                }
+				
 				if ($this->fragTypes->HPO3->selected) {
 					preg_match("/[STY]/", $this->GetSubPeptideSequence($subPeptide), $outArray, PREG_OFFSET_CAPTURE);
 					
@@ -460,6 +507,15 @@ class Peptide {
 					}
 				}
 
+				 if ($this->fragTypes->HCNO->selected && preg_match("/[R]/", $this->GetSubPeptideSequence($subPeptide))) {
+                    $tempMass = $deltaMass;
+                    $tempMass -= ChemistryConstants::$H + ChemistryConstants::$C + ChemistryConstants::$N + ChemistryConstants::$O;
+                    $fragmentMZs = $this->CreateFragment($subPeptide, "y", $tempMass, "-HCNO");
+                    foreach ($fragmentMZs as $fragment) {
+                        array_push($this->fragments, $fragment);
+                    }
+                }
+				
 				if ($this->fragTypes->HPO3->selected) {
 					preg_match("/[STY]/", $this->GetSubPeptideSequence($subPeptide), $outArray, PREG_OFFSET_CAPTURE);
 					
@@ -518,6 +574,15 @@ class Peptide {
 					}
 				}
 
+				if ($this->fragTypes->HCNO->selected && preg_match("/[R]/", $this->GetSubPeptideSequence($subPeptide))) {
+                    $tempMass = $deltaMass;
+                    $tempMass -= ChemistryConstants::$H + ChemistryConstants::$C + ChemistryConstants::$N + ChemistryConstants::$O;
+                    $fragmentMZs = $this->CreateFragment($subPeptide, "z", $tempMass, "-HCNO");
+                    foreach ($fragmentMZs as $fragment) {
+                        array_push($this->fragments, $fragment);
+                    }
+                }
+				
 				if ($this->fragTypes->HPO3->selected) {
 					preg_match("/[STY]/", $this->GetSubPeptideSequence($subPeptide), $outArray, PREG_OFFSET_CAPTURE);
 					
@@ -575,7 +640,16 @@ class Peptide {
 						array_push($this->fragments, $fragment);
 					}
 				}
-
+				
+				 if ($this->fragTypes->HCNO->selected && preg_match("/[R]/", $this->GetSubPeptideSequence($subPeptide))) {
+                    $tempMass = $deltaMass;
+                    $tempMass -= ChemistryConstants::$H + ChemistryConstants::$C + ChemistryConstants::$N + ChemistryConstants::$O;
+                    $fragmentMZs = $this->CreateFragment($subPeptide, "Z", $tempMass, "-HCNO");
+                    foreach ($fragmentMZs as $fragment) {
+                        array_push($this->fragments, $fragment);
+                    }
+                }
+                
 				if ($this->fragTypes->HPO3->selected) {
 					preg_match("/[STY]/", $this->GetSubPeptideSequence($subPeptide), $outArray, PREG_OFFSET_CAPTURE);
 					
